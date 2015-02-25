@@ -26,14 +26,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
-
-
 # Application definition
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
-    #os.path.join(BASE_DIR,  'pages/templates'),
+    os.path.join(BASE_DIR,  'pages/templates'),
+    os.path.join(BASE_DIR,  'logsys/templates'),
 )
 
 INSTALLED_APPS = (
@@ -44,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
+    'logsys',
 )
 
 MIDDLEWARE_CLASSES = (

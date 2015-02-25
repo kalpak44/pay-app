@@ -9,5 +9,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^page/', include('pages.urls', namespace="pages")),
+	url(r'^auth/', include('logsys.urls', namespace="logsys")),
 	url(r'^', include('pages.urls', namespace="pages")),
 )

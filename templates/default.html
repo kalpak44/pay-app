@@ -24,8 +24,22 @@
 	<script src="{% static 'js/particles.js' %}"></script>
 	<script src="{% static 'js/index.js' %}"></script>
 		
-		
-			
+{% if username %}	
+	<!--log out block-->
+	<div id="logOut">
+	    <div class="btn-group">
+		    <a class="btn btn-primary" href="#">{{ username }}</a>
+		    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+		    <ul class="dropdown-menu">
+			    <li><a href="#">Edit</a></li>
+			    <li class="divider"></li>
+			    <li><a href="{% url 'logsys:logout'%}">Log out</a></li>
+		    </ul>
+	    </div>
+    </div>
+{% endif %}
+
+
 	<!--Top menu-->
 	<div class="wrapper">
 
