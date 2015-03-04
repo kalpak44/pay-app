@@ -14,7 +14,7 @@ def index(request):
 	if not auth.get_user(request).is_authenticated():
 		c = {}
 		c.update(csrf(request))
-		return render_to_response('index.html', c)
+		return render_to_response('login.html', c)
 	else:
 		html = "<h1>Redirect on private room</h1>"
 		return HttpResponse(html)

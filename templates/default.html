@@ -41,7 +41,7 @@
 
 
 	<!--Top menu-->
-	<div class="wrapper">
+	<div class="top-menu">
 
 		<input type="checkbox" id="navigation" />
 		<label class="btn"for="navigation">
@@ -53,7 +53,7 @@
 		<nav type="checkbox">
 			<ul>
 				<li>
-					<a href="{% url 'pages:index'%}">Home</a>
+					<a href="/">Home</a>
 				</li>
 				<li>
 					<a href="">Latest News</a>
@@ -73,24 +73,28 @@
 	<!--End Top menu--> 
 
 
-	
-
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<!--main template-->
 	<div class="container">
 	    <div class="row">
 	        <div class="col-md-12 head-block"></div>
 	        <div class="col-md-12 top-material">
 	        	{% block top-material %}{% endblock %}
+	        	{% block registration-block %}{% endblock %}
+	        	{% block login-block %}{% endblock %}
 	        </div>
-	        <div class="col-md-3 left-sidebar"></div>
+	        <div class="col-md-3 left-sidebar">
+	        </div>
 	        <div class="col-md-9 content"></div>
 	        <div class="col-md-12 bottom-block"></div>
 
 	    </div>
 	</div>
 	<!--end main template-->
-
 		
+
+
 	
 	
 	  

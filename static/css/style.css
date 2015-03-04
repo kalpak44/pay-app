@@ -23,7 +23,7 @@ canvas{
 
 
 
-.wrapper nav{
+.top-menu nav{
     position: fixed;
     width:100%;
     top: 0;
@@ -35,7 +35,7 @@ canvas{
     z-index:100;
     
 }
-.wrapper nav ul{
+.top-menu nav ul{
     width:100%;
     height: 250px;
     padding:0;
@@ -44,10 +44,10 @@ canvas{
     background:#222;
     overflow:hidden;
 }
-.wrapper nav li{
+.top-menu nav li{
     margin:0;
 }
-.wrapper nav a{
+.top-menu nav a{
     color:#fff;
     font-size:1em;
     font-family:'helvetica neue', helvetica, arial, sans-serif;
@@ -59,10 +59,10 @@ canvas{
     border-bottom:1px solid #333;
     text-align:center;
 }
-.wrapper nav a:hover{
+.top-menu nav a:hover{
     background:#111;
 }
-.wrapper .btn{
+.top-menu .btn{
     display:block;
     font-family:'helvetica neue', helvetica, arial, sans-serif;
     width:67px;
@@ -80,42 +80,42 @@ canvas{
     left: 95%;
 }
 
-.wrapper input[type="checkbox"]{
+.top-menu input[type="checkbox"]{
     display:none;
 }
-.wrapper input[type="checkbox"]:checked ~ nav{
+.top-menu input[type="checkbox"]:checked ~ nav{
     margin:0;
  
 }
 
-.wrapper input[type="checkbox"]:checked ~ label{
+.top-menu input[type="checkbox"]:checked ~ label{
     -webkit-transform: rotate(-45deg);
      -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.wrapper input[type="checkbox"]:checked ~label .bar2{
+.top-menu input[type="checkbox"]:checked ~label .bar2{
      opacity: 0;
 }
-.wrapper input[type="checkbox"]:checked ~ label .bar1{
+.top-menu input[type="checkbox"]:checked ~ label .bar1{
      -webkit-transform: rotate(0deg) translateY(10px);
      -moz-transform: rotate(0deg) translateY(10px);
        -o-transform: rotate(0deg) translateY(10px);
           transform: rotate(0deg) translateY(10px);
 }
-.wrapper input[type="checkbox"]:checked ~label .bar3{
+.top-menu input[type="checkbox"]:checked ~label .bar3{
   -webkit-transform: rotate(-90deg) translateX(10px);
      -moz-transform: rotate(-90deg) translateX(10px);
        -o-transform: rotate(-90deg) translateX(10px);
           transform: rotate(-90deg) translateX(10px);
 }
 
-.wrapper input[type="checkbox"]:checked ~ label{
+.top-menu input[type="checkbox"]:checked ~ label{
     top:270px;
 }
 
-.wrapper input[type="checkbox"]:checked ~ section{
+.top-menu input[type="checkbox"]:checked ~ section{
     -webkit-transform:translate3d(0px, 270px, 0);
     -moz-transform:translate3d(0px, 270px, 0);
     -o-transform:translate3d(0px, 270px, 0);
@@ -123,7 +123,7 @@ canvas{
 }
 
 
-.wrapper .btn span {
+.top-menu .btn span {
   display: block;
   width: 40px;
   height: 5px;
@@ -138,33 +138,18 @@ canvas{
 
 
 
-#auth-block { 
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  background: rgba(0,0,0,0.3);
-  top:26%;
-  left:10%;
-  color: white;
-  padding: 2rem;
-  position:fixed;
-  width: 30%;
-  float: left;
-  z-index:10;
-  font-size: 1.2rem;
-}
-
 .container{
   position: absolute;
   top: 5%;
   left:0%;
   right: 0%;
-
+  padding: 2em;
   font-size: 1.2rem;
   z-index:0;
   color: white;
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight:100; 
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
 }
 
 #logOut{
@@ -174,24 +159,86 @@ canvas{
   right: 10rem;
 }
 
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
+
+.logsys-block{
+  width:420px;
+  margin:0 auto;
 }
-#auth-block button { 
-  display: block;
-  width: 80%;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: .3s background;
+
+h1{
+  text-align:center;
+  font:25px Oswald;
+  color:#FFF;
+  text-transform:uppercase;
+  text-shadow:#000 0px 1px 5px;
+  margin:0px;
 }
-#auth-block button:hover { 
-   background: rgba(0,0,0,0.5);
+
+p{
+  font:13px Open Sans;
+  color:#6E6E6E;
+  text-shadow:#000 0px 1px 5px;
+}
+
+.logsys-block .form{
+  width:100%;
+}
+
+.logsys-block input[type="text"],input[type="email"],input[type="password"]{
+  width:98%;
+  padding:15px 0px 15px 8px;
+  border-radius:5px;
+  box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+  background:rgba(0,0,0,0.2);
+  @include disable;
+  border:1px solid rgba(0,0,0,1);
+  margin-bottom:10px;
+  color:#6E6E6E;
+  text-shadow:#000 0px 1px 5px;
+}
+
+.logsys-block input[type="submit"]{
+  width:100%;
+  padding:15px;
+  border-radius:5px;
+  @include disable;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#28D2DE), to(#1A878F));
+  background-image: -webkit-linear-gradient(#28D2DE 0%, #1A878F 100%);
+  background-image: -moz-linear-gradient(#28D2DE 0%, #1A878F 100%);
+  background-image: -o-linear-gradient(#28D2DE 0%, #1A878F 100%);
+  background-image: linear-gradient(#28D2DE 0%, #1A878F 100%);
+  font:14px Oswald;
+  color:#FFF;
+  text-transform:uppercase;
+  text-shadow:#000 0px 1px 5px;
+  border:1px solid #000;
+  opacity:0.7;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  border-top:1px solid rgba(255,255,255,0.8)!important;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+}
+
+.logsys-block input:focus{
+  box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3);
+  background:rgba(0,0,0,0.3);
+  @include easeme;
+}
+
+.logsys-block input[type="submit"]:hover{
+  opacity:1;
+  cursor:pointer;
+}
+
+.name-help,.email-help{
+  display:none;
+  padding:0px;
+  margin:0px 0px 15px 0px;
+}
+
+.errorlist{
+  list-style: none;
+  text-align: center;
+  color: red;
 }

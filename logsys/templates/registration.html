@@ -1,0 +1,34 @@
+{% extends 'default.html'%}
+{% load staticfiles %}
+
+{% block registration-block %}
+<!--registration block--> 
+
+<div class="logsys-block">
+  <h1>Register For An Account</h1>
+  <p>To sign-up for a free basic account please provide us with some basic information using
+  the contact form below. Please use valid credentials.</p>
+  <!--
+  <form class="form" method="post" action="{% url 'logsys:register' %}">
+  {% csrf_token %}
+    <input type="text" class="name" placeholder="Username" name="username">
+    <input type="email" class="email" placeholder="Email" name="email">
+    <input type="password" class="name" placeholder="Password" name="password">
+    <input type="password" class="name" placeholder="Confirm password" name="password">
+    <input type="submit" class="submit" value="Register">
+  </form>
+  -->
+
+	<form action="{% url 'logsys:register' %}" method="post">
+	    {% csrf_token %}
+	    {{ form }}
+	    <input type="submit" class="submit" value="Register">
+	</form>
+
+</div>
+
+
+
+
+<!--end registration block--> 
+{% endblock %}
